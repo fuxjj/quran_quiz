@@ -14,11 +14,14 @@
                 <h1 class="text-center text-white sm:text-5xl text-2xl font-bold font-mono sm:pt-10 pt-10">Welcome to the <span class="text-sky-500">Quran</span> Quiz!</h1> <!-- welcome to the quiz-->
                 <p class="text-white p-2 px-5 text-xl sm:pt-10 pt-10">Please choose between <span class="text-emerald-500">Easy</span>, <span class="text-amber-500">Medium</span> and <span class="text-red-500">Hard</span> </p>
                 <button class="bg-cyan-300 p-3 rounded-lg sm:mt-10 mt-10" onclick="startQuiz()">Start Quiz</button>
+                <button class="bg-emerald-500 p-3 rounded-lg sm:mt-10 mt-10" onclick="selectedDifficulty = 'easy', console.log(selectedDifficulty), startQuiz()">Easy</button>
+                <button class="bg-amber-500 p-3 rounded-lg sm:mt-10 mt-10" onclick="selectedDifficulty = 'medium', console.log(selectedDifficulty), startQuiz()">Medium</button>
+                <button class="bg-red-500 p-3 rounded-lg sm:mt-10 mt-10" onclick="selectedDifficulty = 'hard', console.log(selectedDifficulty), startQuiz()">Hard</button>
             </div>
         </div>
 
 
-        <section id="quizArea" class="sm:mx-40 sm:my-20 mx-10 my-5 bg-purple-700 p-10 min-h-screen rounded-lg" style="display: none;"> <!--Our main code section for the quiz-->
+        <section id="quizArea" class="sm:mx-40 sm:my-20 mx-10 my-5 bg-slate-700 p-10 min-h-screen rounded-lg" style="display: none;"> <!--Our main code section for the quiz-->
             <div class="quiz">
                 <h2 id="question" class="text-center text-white sm:text-4xl text-2xl font-bold font-mono sm:pt-36 pt-20 pb-5">Question goes here</h2>
                 <h2 id="ayah" class="text-center text-white sm:text-4xl text-2xl font-bold font-mono sm:pt-10 pt-10 pb-5">Ayah goes here</h2>

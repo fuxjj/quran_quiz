@@ -45,11 +45,13 @@ let currentQuestionIndex = 0;
 let currentAyahIndex = 0;
 let score = 0;
 
+let selectedDifficulty;
 function startQuiz() {
     document.getElementById("startPage").style.display = "none";
     document.getElementById("quizArea").style.display = "block";
 
     currentQuestionIndex = 0;
+    currentAyahIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
@@ -121,3 +123,5 @@ nextButton.addEventListener("click", ()=> {
         startQuiz();
     }
 });
+
+console.log(selectedDifficulty)
