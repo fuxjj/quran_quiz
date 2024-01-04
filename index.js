@@ -38,6 +38,7 @@ const hardQuestions = [
 ]
 
 const questionElement = document.getElementById("question");
+const ayahElement = document.getElementById("ayah")
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next");
 
@@ -59,9 +60,21 @@ function startQuiz() {
 
 function showQuestion() {
     resetState();
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion;
+
+    if(selectedDifficulty === "easy") {
+        currentQuestion = easyQuestions[currentQuestionIndex];
+    } else if(selectedDifficulty === "medium") {
+        currentQuestion = mediumQuestions[currentQuestionIndex];
+    } else if(selectedDifficulty === "hard") {
+        currentQuestion = hardQuestions[currentQuestionIndex];
+    }
+
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    let ayahNo = currentAyahIndex + 1;
+    ayahElement.innerHTML = ayahNo + ". " + currentQuestion.ayah;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -123,5 +136,3 @@ nextButton.addEventListener("click", ()=> {
         startQuiz();
     }
 });
-
-console.log(selectedDifficulty)
