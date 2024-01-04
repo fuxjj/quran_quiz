@@ -1,59 +1,54 @@
-const questions = [
+const easyQuestions = [
     {
-        question: "What is the largest animal in the world?",
+        question: "What surah is this from?",
+        ayah: "Ayahtext",
         answers: [
-            {text: "Shark", correct: false},
-            {text: "Blue Whale", correct: true},
-            {text: "Elephant", correct: false},
-            {text: "Ant", correct: false},
+            {text: "Example", correct: false},
+            {text: "Example", correct: false},
+            {text: "Example", correct: true},
+            {text: "Example", correct: false}
         ]
     }, 
-    {
-        question: "Who came up with the word 'vomit'?",
-        answers: [
-            {text: "William Shakespeare", correct: true},
-            {text: "Richard Vomit", correct: false},
-            {text: "Justin Brown", correct: false},
-            {text: "Jay-Z", correct: false},
-        ]
-    },
-    {
-        question: "What human muscle is the strongest?",
-        answers: [
-            {text: "Pectoral", correct: false},
-            {text: "Calf", correct: false},
-            {text: "Thigh", correct: false},
-            {text: "Jaw", correct: true},
-        ]
-    }, 
-    {
-        question: "How many hearts does an octopus have?",
-        answers: [
-            {text: "1", correct: false},
-            {text: "2", correct: false},
-            {text: "3", correct: true},
-            {text: "Trick question - they have none.", correct: false},
-        ]
-    },
-    {
-        question: "Which planet is the hottest in the Milky Way?",
-        answers: [
-            {text: "Earth", correct: false},
-            {text: "Venus", correct: true},
-            {text: "Mercury", correct: false},
-            {text: "The Sun", correct: false},
-        ]
-    }
 ];
+
+const mediumQuestions = [
+    {
+        question: "What surah is this from?",
+        ayah: "Ayahtext",
+        answers: [
+            {text: "Example", correct: false},
+            {text: "Example", correct: false},
+            {text: "Example", correct: true},
+            {text: "Example", correct: false}
+        ]
+    },
+]
+
+const hardQuestions = [
+    {
+        question: "What surah is this from?",
+        ayah: "Ayahtext",
+        answers: [
+            {text: "Example", correct: false},
+            {text: "Example", correct: false},
+            {text: "Example", correct: true},
+            {text: "Example", correct: false}
+        ]
+    },
+]
 
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next");
 
 let currentQuestionIndex = 0;
+let currentAyahIndex = 0;
 let score = 0;
 
 function startQuiz() {
+    document.getElementById("startPage").style.display = "none";
+    document.getElementById("quizArea").style.display = "block";
+
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
@@ -126,6 +121,3 @@ nextButton.addEventListener("click", ()=> {
         startQuiz();
     }
 });
-
-
-startQuiz();
