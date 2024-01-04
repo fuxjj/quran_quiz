@@ -1,7 +1,17 @@
 const easyQuestions = [
     {
-        question: "What surah is this from?",
-        ayah: "Ayahtext",
+        question: "What Surah is this from?",
+        ayah: "قُلْ أَرَءَيْتُمْ إِنْ أَصْبَحَ مَآؤُكُمْ غَوْرًۭا فَمَن يَأْتِيكُم بِمَآءٍۢ مَّعِينٍۭ",
+        answers: [
+            {text: "Surah Maryam", correct: false},
+            {text: "Surah Fatihah", correct: false},
+            {text: "Surah Mulk", correct: true},
+            {text: "Surah Baqarah", correct: false}
+        ]
+    }, 
+    {
+        question: "What Surah is this from?",
+        ayah: "Ayahtext2",
         answers: [
             {text: "Example", correct: false},
             {text: "Example", correct: false},
@@ -9,6 +19,36 @@ const easyQuestions = [
             {text: "Example", correct: false}
         ]
     }, 
+    {
+        question: "What Surah is this from?",
+        ayah: "Ayahtext2",
+        answers: [
+            {text: "Example", correct: false},
+            {text: "Example", correct: false},
+            {text: "Example", correct: true},
+            {text: "Example", correct: false}
+        ]
+    },
+    {
+        question: "What Surah is this from?",
+        ayah: "Ayahtext2",
+        answers: [
+            {text: "Example", correct: false},
+            {text: "Example", correct: false},
+            {text: "Example", correct: true},
+            {text: "Example", correct: false}
+        ]
+    },
+    {
+        question: "What Surah is this from?",
+        ayah: "Ayahtext2",
+        answers: [
+            {text: "Example", correct: false},
+            {text: "Example", correct: false},
+            {text: "Example", correct: true},
+            {text: "Example", correct: false}
+        ]
+    },
 ];
 
 const mediumQuestions = [
@@ -42,11 +82,16 @@ const ayahElement = document.getElementById("ayah")
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next");
 
-let currentQuestionIndex = 0;
+let currentQuestion;
+
+let currentQuestionIndex = 0
+
 let currentAyahIndex = 0;
 let score = 0;
 
 let selectedDifficulty;
+
+
 function startQuiz() {
     document.getElementById("startPage").style.display = "none";
     document.getElementById("quizArea").style.display = "block";
@@ -60,13 +105,12 @@ function startQuiz() {
 
 function showQuestion() {
     resetState();
-    let currentQuestion;
 
-    if(selectedDifficulty === "easy") {
+    if (selectedDifficulty === "easy") {
         currentQuestion = easyQuestions[currentQuestionIndex];
-    } else if(selectedDifficulty === "medium") {
+    } else if (selectedDifficulty === "medium") {
         currentQuestion = mediumQuestions[currentQuestionIndex];
-    } else if(selectedDifficulty === "hard") {
+    } else if (selectedDifficulty === "hard") {
         currentQuestion = hardQuestions[currentQuestionIndex];
     }
 
@@ -115,24 +159,61 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = `You scored ${score} out of ${currentQuestionIndex}!`;
+    if (score >= 5) {
+        ayahElement.innerHTML = `Alhamdulillah! Perfect score!`;
+    } else if (score >= 3) {
+        ayahElement.innerHTML = `Alhamdulillah! Over half!`;
+    } else if (score >= 0) {
+        ayahElement.innerHTML = `In Sha Allah next time!`
+    }
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 };
 
 function handleNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length) {
-        showQuestion();
-    } else{
-        showScore();
+
+    if (selectedDifficulty === "easy") {
+        if (currentQuestionIndex < easyQuestions.length) {
+            showQuestion();
+        } else {
+            showScore()
+        }
+    } else if (selectedDifficulty === "medium") {
+        if (currentQuestionIndex < mediumQuestions.length) {
+            showQuestion();
+        } else {
+            showScore();
+        }
+    } else if (selectedDifficulty === "hard") {
+        if (currentQuestionIndex < hardQuestions.length) {
+            showQuestion();
+        } else {
+            showScore();
+        }
     }
-};
+}
 
 nextButton.addEventListener("click", ()=> {
-    if(currentQuestionIndex < questions.length) {
-        handleNextButton();
-    } else {
-        startQuiz();
+
+    if (selectedDifficulty === "easy") {
+        if (currentQuestionIndex < easyQuestions.length) {
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    } else if (selectedDifficulty === "medium") {
+        if (currentQuestionIndex < mediumQuestions.length) {
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
+    } else if (selectedDifficulty === "hard") {
+        if (currentQuestionIndex < hardQuestions.length) {
+            handleNextButton();
+        } else {
+            startQuiz();
+        }
     }
 });
