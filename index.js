@@ -4,49 +4,49 @@ const easyQuestions = [
         ayah: "قُلْ أَرَءَيْتُمْ إِنْ أَصْبَحَ مَآؤُكُمْ غَوْرًۭا فَمَن يَأْتِيكُم بِمَآءٍۢ مَّعِينٍۭ",
         answers: [
             {text: "Surah Maryam", correct: false},
-            {text: "Surah Fatihah", correct: false},
-            {text: "Surah Mulk", correct: true},
-            {text: "Surah Baqarah", correct: false}
+            {text: "Surah Al-Fatihah", correct: false},
+            {text: "Surah Al-Mulk", correct: true},
+            {text: "Surah Al-Baqarah", correct: false}
         ]
     }, 
     {
         question: "What Surah is this from?",
-        ayah: "Ayahtext2",
+        ayah: "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ ١٣",
         answers: [
-            {text: "Example", correct: false},
-            {text: "Example", correct: false},
-            {text: "Example", correct: true},
-            {text: "Example", correct: false}
+            {text: "Surah Al-Fatihah", correct: false},
+            {text: "Surah Al-Baqarah", correct: false},
+            {text: "Surah An-Nasr", correct: false},
+            {text: "Surah Ar-Rahman", correct: true}
         ]
     }, 
     {
         question: "What Surah is this from?",
-        ayah: "Ayahtext2",
+        ayah: "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ ٢",
         answers: [
-            {text: "Example", correct: false},
-            {text: "Example", correct: false},
-            {text: "Example", correct: true},
-            {text: "Example", correct: false}
+            {text: "Surah Al-Masad", correct: false},
+            {text: "Surah Al-Qadr", correct: true},
+            {text: "Surah Al-Fajr", correct: false},
+            {text: "Surah Al-Kawthar", correct: false}
         ]
     },
     {
         question: "What Surah is this from?",
-        ayah: "Ayahtext2",
+        ayah: "لَمْ يَلِدْ وَلَمْ يُولَدْ ٣",
         answers: [
-            {text: "Example", correct: false},
-            {text: "Example", correct: false},
-            {text: "Example", correct: true},
-            {text: "Example", correct: false}
+            {text: "Surah Al-Falaq", correct: false},
+            {text: "Surah An-Nas", correct: false},
+            {text: "Surah Al-Bayyinah", correct: false},
+            {text: "Surah Al-Ikhlas", correct: true}
         ]
     },
     {
         question: "What Surah is this from?",
-        ayah: "Ayahtext2",
+        ayah: "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًۭا",
         answers: [
-            {text: "Example", correct: false},
-            {text: "Example", correct: false},
-            {text: "Example", correct: true},
-            {text: "Example", correct: false}
+            {text: "Surah Al-Kafirun", correct: false},
+            {text: "Surah Al-Ikhlas", correct: false},
+            {text: "Surah An-Nasr", correct: true},
+            {text: "Surah Al-Ma'un", correct: false}
         ]
     },
 ];
