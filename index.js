@@ -54,12 +54,52 @@ const easyQuestions = [
 const mediumQuestions = [
     {
         question: "What surah is this from?",
-        ayah: "Ayahtext",
+        ayah: "قُل لِّمَنِ ٱلْأَرْضُ وَمَن فِيهَآ إِن كُنتُمْ تَعْلَمُونَ",
         answers: [
-            {text: "Example", correct: false},
-            {text: "Example", correct: false},
-            {text: "Example", correct: true},
-            {text: "Example", correct: false}
+            {text: "Surah Al-Anbya", correct: false},
+            {text: "Surah Al-Hajj", correct: false},
+            {text: "Surah Mu'minun", correct: true},
+            {text: "Surah An-Nur", correct: false}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌۭ ",
+        answers: [
+            {text: "Surah Al-Qadr", correct: false},
+            {text: "Surah Al-Bayyinah", correct: false},
+            {text: "Surah Az-Zalzalah", correct: false},
+            {text: "Surah Al-'Adiyat", correct: true}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًۭا يَرَهُۥ ",
+        answers: [
+            {text: "Surah Az-Zalzalah", correct: true},
+            {text: "Surah Al-Qari'ah", correct: false},
+            {text: "Surah At-Takathur", correct: false},
+            {text: "Surah Al-'Asr", correct: false}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+        answers: [
+            {text: "Surah Al-Layl", correct: false},
+            {text: "Surah Ad-Duhaa", correct: true},
+            {text: "Surah Ash-Sharh", correct: false},
+            {text: "Surah At-Tin", correct: false}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًۭا فَمُلَـٰقِيهِ",
+        answers: [
+            {text: "Surah Al-Infitar", correct: false},
+            {text: "Surah Al-Mutaffifin", correct: false},
+            {text: "Surah Al-Inshiqaq", correct: true},
+            {text: "Surah Al-Buruj", correct: false}
         ]
     },
 ]
@@ -67,12 +107,52 @@ const mediumQuestions = [
 const hardQuestions = [
     {
         question: "What surah is this from?",
-        ayah: "Ayahtext",
+        ayah: "وَيُسَبِّحُ ٱلرَّعْدُ بِحَمْدِهِۦ وَٱلْمَلَـٰٓئِكَةُ مِنْ خِيفَتِهِۦ وَيُرْسِلُ ٱلصَّوَٰعِقَ فَيُصِيبُ بِهَا مَن يَشَآءُ وَهُمْ يُجَـٰدِلُونَ فِى ٱللَّهِ وَهُوَ شَدِيدُ ٱلْمِحَالِ ",
         answers: [
-            {text: "Example", correct: false},
-            {text: "Example", correct: false},
-            {text: "Example", correct: true},
-            {text: "Example", correct: false}
+            {text: "Surah Hud", correct: false},
+            {text: "Surah Yusuf", correct: false},
+            {text: "Surah Ar-Rad", correct: true},
+            {text: "Surah Ibrahim", correct: false}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "وَلَا تَقُولُوا۟ لِمَا تَصِفُ أَلْسِنَتُكُمُ ٱلْكَذِبَ هَـٰذَا حَلَـٰلٌۭ وَهَـٰذَا حَرَامٌۭ لِّتَفْتَرُوا۟ عَلَى ٱللَّهِ ٱلْكَذِبَ ۚ إِنَّ ٱلَّذِينَ يَفْتَرُونَ عَلَى ٱللَّهِ ٱلْكَذِبَ لَا يُفْلِحُونَ ",
+        answers: [
+            {text: "Surah Al-Hijr", correct: false},
+            {text: "Surah Al-Nahl", correct: true},
+            {text: "Surah Al-Isra", correct: false},
+            {text: "Surah Al-Kahf", correct: false}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ فِرَٰشًۭا وَٱلسَّمَآءَ بِنَآءًۭ وَأَنزَلَ مِنَ ٱلسَّمَآءِ مَآءًۭ فَأَخْرَجَ بِهِۦ مِنَ ٱلثَّمَرَٰتِ رِزْقًۭا لَّكُمْ ۖ فَلَا تَجْعَلُوا۟ لِلَّهِ أَندَادًۭا وَأَنتُمْ تَعْلَمُونَ ",
+        answers: [
+            {text: "Surah Fatihah", correct: false},
+            {text: "Surah Baqarah", correct: true},
+            {text: "Surah Ali 'Imran", correct: false},
+            {text: "Surah An-Nisa", correct: false}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِشِمَالِهِۦ فَيَقُولُ يَـٰلَيْتَنِى لَمْ أُوتَ كِتَـٰبِيَهْ",
+        answers: [
+            {text: "Surah At-Tahrim", correct: false},
+            {text: "Surah Al-Mulk", correct: false},
+            {text: "Surah Al-Qalam", correct: false},
+            {text: "Surah Al-Haqqah", correct: true}
+        ]
+    },
+    {
+        question: "What surah is this from?",
+        ayah: "مَا يَنظُرُونَ إِلَّا صَيْحَةًۭ وَٰحِدَةًۭ تَأْخُذُهُمْ وَهُمْ يَخِصِّمُونَ",
+        answers: [
+            {text: "Surah Fatir", correct: false},
+            {text: "Surah Ya-Sin", correct: true},
+            {text: "Surah As-Saffat", correct: false},
+            {text: "Surah Sad", correct: false}
         ]
     },
 ]
@@ -81,6 +161,7 @@ const questionElement = document.getElementById("question");
 const ayahElement = document.getElementById("ayah")
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next");
+const menuButton = document.getElementById("menu");
 
 let currentQuestion;
 
@@ -134,6 +215,7 @@ function showQuestion() {
 
 function resetState() {
     nextButton.style.display = "none";
+    menuButton.style.display = "none";
     while (answerButton.firstChild) {
         answerButton.removeChild(answerButton.firstChild);
     }
@@ -169,6 +251,7 @@ function showScore() {
     }
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
+    menuButton.style.display = "block";
 };
 
 function handleNextButton() {
@@ -195,6 +278,10 @@ function handleNextButton() {
     }
 }
 
+function handleMenuButton() {
+    location.reload()
+}
+
 nextButton.addEventListener("click", ()=> {
 
     if (selectedDifficulty === "easy") {
@@ -216,4 +303,8 @@ nextButton.addEventListener("click", ()=> {
             startQuiz();
         }
     }
+});
+
+menuButton.addEventListener("click", ()=> {
+    handleMenuButton();
 });
